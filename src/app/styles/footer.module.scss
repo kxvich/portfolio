@@ -1,0 +1,108 @@
+// @import "../globals.scss";
+$color-primary: #0e4d4e;
+// $color-secondary: #7b7b7b;
+$color-secondary: #999d9e;
+$color-tertiary: #f8f8f8;
+$color-white: #ffebcd;
+
+.sectionContact {
+	height: 70vh;
+	background-color: $color-primary;
+	padding: 4rem 0;
+	overflow: hidden;
+	@media only screen and (max-width: 56.25rem) {
+		padding: 2rem;
+		height: 40vh;
+	}
+
+	@media only screen and (max-width: 25.875rem) {
+		padding: 2rem;
+		height: 40vh;
+	}
+
+	@media only screen and (max-width: 20rem) {
+		padding: 2rem;
+		height: 60vh;
+	}
+
+	&Container {
+		max-width: 95rem;
+		margin: 0 auto;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		@media only screen and (max-width: 56.25rem) {
+			flex-direction: column;
+			margin-bottom: 2rem;
+		}
+	}
+
+	&Heading {
+		color: $color-white;
+		font-size: 5rem;
+		font-family: "Oswald", sans-serif;
+		@media only screen and (max-width: 56.25rem) {
+			font-size: 2rem;
+		}
+	}
+
+	&Arrow {
+		@media only screen and (max-width: 56.25rem) {
+			display: none;
+		}
+	}
+
+	&Icon {
+		@media only screen and (max-width: 56.25rem) {
+			width: 2rem;
+		}
+	}
+
+	&EmailContainer {
+		max-width: 95rem;
+		margin: 0 auto;
+		text-align: center;
+	}
+
+	&Email {
+		color: $color-white;
+		border: 1px solid $color-tertiary;
+		border-radius: 3rem;
+		display: inline-block;
+		padding: 2rem 4rem;
+		font-family: "Aeonik", sans-serif;
+		font-size: 1.5rem;
+		letter-spacing: 0.2rem;
+		margin-bottom: 12rem;
+		transition: all 0.3s;
+		&:not(:last-child) {
+			margin-right: 2rem;
+		}
+
+		&:hover {
+			background-color: $color-white;
+			color: $color-primary;
+		}
+
+		@media only screen and (max-width: 56.25rem) {
+			margin-right: 0;
+			margin-bottom: 2rem;
+			padding: 1rem 2rem;
+			font-size: 1.2rem;
+		}
+	}
+
+	&SocialsContainer {
+		display: flex;
+		align-items: center;
+		gap: 25px;
+	}
+
+	&Copyright {
+		color: $color-tertiary;
+		font-family: "Aeonik", sans-serif;
+		font-size: 1.5rem;
+		border-top: 1px solid $color-secondary;
+		padding-top: 2rem;
+	}
+}

@@ -1,0 +1,32 @@
+// @import "../globals.scss";
+$color-primary: #0e4d4e;
+// $color-secondary: #7b7b7b;
+$color-secondary: #999d9e;
+$color-tertiary: #f8f8f8;
+$color-white: #ffebcd;
+
+.background {
+	width: 100%;
+	height: 100vh;
+	background-color: #ffebcd;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: fixed;
+	top: 0;
+	left: 0;
+	overflow: hidden;
+}
+
+.text {
+	font-family: "Oswald", serif;
+	color: #0e4d4e;
+	font-size: 3rem;
+	margin: 0;
+	display: flex;
+	gap: 2px;
+
+	@media only screen and (max-width: 56.25rem) {
+		font-size: 2rem;
+	}
+}

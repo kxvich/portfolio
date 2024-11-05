@@ -1,0 +1,122 @@
+// @import "../globals.scss";
+$color-primary: #0e4d4e;
+// $color-secondary: #7b7b7b;
+$color-secondary: #999d9e;
+$color-tertiary: #f8f8f8;
+$color-white: #ffebcd;
+
+.background {
+	background-color: $color-white;
+	height: 100vh;
+	width: 100%;
+	position: fixed;
+	overflow: hidden;
+
+	font-family: "Oswald", sans-serif;
+	color: $color-primary;
+	z-index: 100;
+}
+
+.logo {
+	position: absolute;
+	top: 3%;
+	left: 3%;
+}
+
+.logoText {
+	font-size: 1.5rem;
+	font-weight: 400;
+	@media only screen and (max-width: 25.875rem) {
+		font-size: 2rem;
+	}
+	@media only screen and (max-width: 20rem) {
+		font-size: 1.2rem;
+	}
+}
+
+.closeButton {
+	position: absolute;
+	top: 3%;
+	right: 5%;
+	background-color: $color-primary;
+	width: 5rem;
+	height: 5rem;
+	border-radius: 50%;
+	color: $color-white;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	cursor: pointer;
+}
+
+.list {
+	// margin: 0 1rem;
+	padding: 1.5rem 0 15rem 2.5rem;
+	list-style: none;
+	position: absolute;
+	top: 15%;
+	border-top: 1px solid $color-primary;
+	border-bottom: 1px solid $color-primary;
+	width: 100%;
+    @media only screen and (max-width: 26.75rem) {
+		padding: 1.5rem 0 20rem 2.5rem;
+	}
+	@media only screen and (max-width: 25.875rem) {
+		padding: 1.5rem 0 18rem 2.5rem;
+	}
+	@media only screen and (max-width: 24.375rem) {
+		padding: 1.5rem 0 14rem 2.5rem;
+	}
+	@media only screen and (max-width: 23.438rem) {
+		padding: 1.5rem 0 11rem 2.5rem;
+	}
+	@media only screen and (max-width: 22.5rem) {
+		padding: 1.5rem 0 9rem 2.5rem;
+	}
+	@media only screen and (max-width: 20rem) {
+		padding: 1.5rem 0 10rem 2.5rem;
+	}
+
+	&Item {
+		font-size: 3.5rem;
+		letter-spacing: 0.25rem;
+		&:not(:last-child) {
+			margin-bottom: 2rem;
+		}
+        @media only screen and (max-width: 26.75rem) {
+           font-size: 4rem;
+        }
+
+		@media only screen and (max-width: 20rem) {
+			font-size: 2rem;
+		}
+	}
+}
+
+.socials {
+	position: absolute;
+	bottom: 2%;
+
+	&Heading {
+		padding-left: 2rem;
+		font-size: 2rem;
+		@media only screen and (max-width: 20rem) {
+			font-size: 1.5rem;
+		}
+	}
+
+	&List {
+		list-style: none;
+		padding: 0 0 0 2rem;
+		display: flex;
+		gap: 1rem;
+
+		&Item {
+			font-size: 1.5rem;
+			letter-spacing: 0.15rem;
+			@media only screen and (max-width: 20rem) {
+				font-size: 1.2rem;
+			}
+		}
+	}
+}
