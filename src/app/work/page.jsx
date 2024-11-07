@@ -1,13 +1,17 @@
+"use client";
+
 import { motion, AnimatePresence } from "framer-motion";
 import Image from "next/image";
-import styles from "../styles/main.module.scss";
+import styles from "../styles/work.module.scss";
 import { useState } from "react";
-import { useRouter } from "next/navigation";
 
-function Main() {
+function Page() {
 	const [isOpen, setIsOpen] = useState(false);
 	const [selectedId, setSelectedId] = useState(null);
-	const router = useRouter();
+	function handleSelection(id) {
+		setSelectedId(selectedId === id ? null : id);
+		setIsOpen(!isOpen);
+	}
 
 	const works = [
 		{
@@ -47,61 +51,15 @@ function Main() {
 			},
 		}),
 	};
-	function handleSelection(id) {
-		setSelectedId(selectedId === id ? null : id);
-		setIsOpen(!isOpen);
-	}
 	return (
 		<div>
-			<section className={styles.sectionWhat}>
-				<motion.div
-					variants={bodyTextVariant}
-					initial="closed"
-					whileInView="open"
-					viewport={{ once: true, amount: 0.2 }}
-					className={styles.sectionWhatTextBox}
-				>
-					<motion.h2 className={styles.sectionWhatheading}>WHAT I DO</motion.h2>
-					<Image
-						src={"/arrow-right-solid.svg"}
-						width={"20"}
-						height={"20"}
-						alt="arrow-icon"
-						className={styles.sectionWhatArrow}
-					/>
-					<p className={styles.sectionWhatParagraph}>
-						I design and develop elegant websites that are fast, responsive, and
-						user-friendly{" "}
-					</p>
-				</motion.div>
-				<motion.div
-					variants={bodyTextVariant}
-					initial="closed"
-					whileInView="open"
-					viewport={{ once: true, amount: 0.2 }}
-					className={styles.sectionWhatTextBox}
-				>
-					<h2 className={styles.sectionWhatheading}> HOW I DO IT</h2>
-					<Image
-						src={"/arrow-right-solid.svg"}
-						width={"20"}
-						height={"20"}
-						alt="arrow-icon"
-						className={styles.sectionWhatArrow}
-					/>
-					<p className={styles.sectionWhatParagraph}>
-						I’m highly skilled in HTML, CSS, JavaScript, React, and Next.js,
-						delivering efficient and modern web solutions.
-					</p>
-				</motion.div>
-			</section>
-			<section className={styles.sectionMyWorks}>
+			<section className={styles.Works}>
 				<motion.h3
 					variants={bodyTextVariant}
 					initial="closed"
 					whileInView="open"
 					viewport={{ once: true, amount: 0.2 }}
-					className={styles.sectionMyWorksHeading}
+					className={styles.WorksHeading}
 				>
 					MY WORKS
 				</motion.h3>
@@ -110,7 +68,7 @@ function Main() {
 					initial="closed"
 					whileInView="open"
 					viewport={{ once: true, amount: 0.2 }}
-					className={styles.sectionMyWorksList}
+					className={styles.WorksList}
 				>
 					{works.map((work, i) => {
 						return (
@@ -126,12 +84,10 @@ function Main() {
 											duration: 0.25,
 											ease: "easeInOut",
 										}}
-										className={styles.sectionMyWorksListItem}
+										className={styles.WorksListItem}
 									>
-										<h2 className={styles.sectionMyWorksListItemName}>
-											{work.name}
-										</h2>
-										<p className={styles.sectionMyWorksListItemCategory}>
+										<h2 className={styles.WorksListItemName}>{work.name}</h2>
+										<p className={styles.WorksListItemCategory}>
 											Design & Development
 										</p>
 									</motion.li>
@@ -146,20 +102,18 @@ function Main() {
 												duration: 0.25,
 												ease: "easeIn",
 											}}
-											className={styles.sectionMyWorksListItemDetails}
+											className={styles.WorksListItemDetails}
 										>
-											<p className={styles.sectionMyWorksListItemText}>
+											<p className={styles.WorksListItemText}>
 												{work.description}
 											</p>
 											<a
 												href={work.href}
-												className={styles.sectionMyWorksListItemButton}
+												className={styles.WorksListItemButton}
 											>
 												see website
 											</a>
-											<div
-												className={styles.sectionMyWorksListItemImageContainer}
-											>
+											<div className={styles.WorksListItemImageContainer}>
 												{work.images.map((image, i) => {
 													return (
 														<Image
@@ -168,7 +122,7 @@ function Main() {
 															src={image}
 															width={410}
 															height={205}
-															className={styles.sectionMyWorksListItemImage}
+															className={styles.WorksListItemImage}
 														/>
 													);
 												})}
@@ -180,17 +134,9 @@ function Main() {
 						);
 					})}
 				</motion.ul>
-				<div className={styles.sectionMyWorksButtonContainer}>
-					<button
-						onClick={() => router.push("/work")}
-						className={styles.sectionMyWorksButton}
-					>
-						More Works
-					</button>
-				</div>
 			</section>
 		</div>
 	);
 }
 
-export default Main;
+export default Page;

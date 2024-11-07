@@ -67,6 +67,7 @@ body {
 	margin: 0;
 	padding: 0;
 	position: relative;
+	-webkit-tap-highlight-color: transparent;
 }
 
 html {
@@ -74,12 +75,4 @@ html {
 	scroll-behavior: smooth;
 }
 
-@keyframes spin {
-	0% {
-		transform: rotate(0);
-	}
 
-	100% {
-		transform: rotate(180deg);
-	}
-}

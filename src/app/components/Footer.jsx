@@ -35,7 +35,7 @@ function Footer() {
 				>
 					<div>
 						<h1 className={styles.sectionContactHeading}>
-							{`Reach out, Let's work`}
+							{`Contact Me, Let's work`}
 						</h1>
 					</div>
 					<Image
