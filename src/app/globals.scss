@@ -1,10 +1,44 @@
-@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Satisfy&display=swap");
+@font-face {
+	font-family: "Oswald";
+	font-weight: 200;
+	font-style: normal;
+	src: url("./fonts/Oswald-ExtraLight.ttf") format("truetype");
+}
 
-// $color-primary: #0e4d4e;
-// // $color-secondary: #7b7b7b;
-// $color-secondary: #999d9e;
-// $color-tertiary: #f8f8f8;
-// $color-white: #ffebcd;
+@font-face {
+	font-family: "Oswald";
+	font-weight: 300;
+	font-style: normal;
+	src: url("./fonts/Oswald-Light.ttf") format("truetype");
+}
+
+@font-face {
+	font-family: "Oswald";
+	font-weight: 400;
+	font-style: normal;
+	src: url("./fonts/Oswald-Regular.ttf") format("truetype");
+}
+
+@font-face {
+	font-family: "Oswald";
+	font-weight: 500;
+	font-style: normal;
+	src: url("./fonts/Oswald-Medium.ttf") format("truetype");
+}
+
+@font-face {
+	font-family: "Oswald";
+	font-weight: 600;
+	font-style: normal;
+	src: url("./fonts/Oswald-SemiBold.ttf") format("truetype");
+}
+
+@font-face {
+	font-family: "Oswald";
+	font-weight: 700;
+	font-style: normal;
+	src: url("./fonts/Oswald-Bold.ttf") format("truetype");
+}
 
 @font-face {
 	font-family: "Aeonik";
@@ -67,19 +101,10 @@ body {
 	margin: 0;
 	padding: 0;
 	position: relative;
+	-webkit-tap-highlight-color: transparent;
 }
 
 html {
 	font-size: 62.5%;
 	scroll-behavior: smooth;
-}
-
-@keyframes spin {
-	0% {
-		transform: rotate(0);
-	}
-
-	100% {
-		transform: rotate(180deg);
-	}
 }

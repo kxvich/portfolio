@@ -1,0 +1,72 @@
+$color-primary: #0e4d4e;
+// $color-secondary: #7b7b7b;
+$color-secondary: #999d9e;
+$color-tertiary: #f8f8f8;
+$color-white: #ffebcd;
+
+.container {
+	background-color: $color-white;
+	padding: 5rem 0;
+	color: $color-primary;
+}
+
+.heading {
+	margin: 0 auto;
+	max-width: 95rem;
+	margin-bottom: 4rem;
+	text-align: center;
+	@media only screen and (max-width: 56.25rem) {
+		padding: 0 1rem;
+	}
+}
+
+.headingText {
+	color: $color-primary;
+	font-family: "aeonik", sans-serif;
+	font-size: 5rem;
+	width: 100%;
+	margin: 0;
+	@media only screen and (max-width: 56.25rem) {
+		font-size: 3.5rem;
+	}
+}
+
+.textBox {
+	margin: 0 auto;
+	max-width: 95rem;
+	text-align: center;
+
+	&Paragraph {
+		padding-top: 2rem;
+		border-top: 1px solid $color-primary;
+		font-family: "Oswald", serif;
+		font-size: 2rem;
+		font-weight: 400;
+		margin-bottom: 6rem;
+		@media only screen and (max-width: 56.25rem) {
+			font-size: 1.7rem;
+			padding: 2rem;
+			margin-bottom: 2rem;
+		}
+	}
+}
+
+.cardContainer {
+	display: flex;
+	gap: 1rem;
+	@media only screen and (max-width: 56.25rem) {
+		flex-direction: column;
+	}
+}
+
+.card {
+	flex: 1;
+	font-family: "Oswald", serif;
+	font-size: 1.5rem;
+	font-weight: 400;
+	border-top: 1px solid $color-secondary;
+	@media only screen and (max-width: 56.25rem) {
+		font-size: 1.3rem;
+		padding: 0 2rem;
+	}
+}

@@ -1,4 +1,7 @@
+import { AppProvider } from "./contexts/AppContext";
+import NavBar from "./components/NavBar";
 import "./globals.scss";
+import SideBar from "./components/sideBar";
 
 export const metadata = {
 	title: "Stanley Emmanuel",
@@ -8,7 +11,13 @@ export const metadata = {
 export default function RootLayout({ children }) {
 	return (
 		<html lang="en">
-			<body>{children}</body>
+			<body>
+				<AppProvider>
+					<SideBar />
+					<NavBar />
+					{children}
+				</AppProvider>
+			</body>
 		</html>
 	);
 }

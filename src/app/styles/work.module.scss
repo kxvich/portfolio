@@ -1,91 +1,13 @@
-// @import "../globals.scss";
-
 $color-primary: #0e4d4e;
 // $color-secondary: #7b7b7b;
 $color-secondary: #999d9e;
 $color-tertiary: #f8f8f8;
 $color-white: #ffebcd;
-.sectionWhat {
-	height: 60vh;
-	background-color: #ffebcd;
-	padding: 10rem 15rem;
 
-	@media only screen and (max-width: 56.25rem) {
-		padding: 2rem 3rem;
-		height: 80vh;
-	}
-	@media only screen and (max-width: 26.75rem) {
-		padding: 3rem;
-		height: 50vh;
-	}
-	@media only screen and (max-width: 20rem) {
-		height: 70vh;
-	}
-
-	&TextBox {
-		display: flex;
-		justify-content: space-between;
-		align-items: center;
-		&:not(:last-child) {
-			margin-bottom: 10rem;
-			@media only screen and (max-width: 56.25rem) {
-				margin-bottom: 3rem;
-			}
-		}
-		@media only screen and (max-width: 56.25rem) {
-			flex-direction: column;
-		}
-	}
-
-	&heading {
-		color: #0e4d4e;
-		font-family: "Aeonik", sans-serif;
-		font-size: 3rem;
-		font-weight: 400;
-		width: 20%;
-
-		@media only screen and (max-width: 56.25rem) {
-			font-size: 2rem;
-			width: 100%;
-			text-align: center;
-		}
-		// @media only screen and (max-width: 22.5rem) {
-		// 	font-size: 1.8rem;
-		// 	width: 30%;
-		// }
-		// @media only screen and (max-width: 20rem) {
-		// 	font-size: 1.4rem;
-		// 	width: 30%;
-		// }
-	}
-
-	&Arrow {
-		@media only screen and (max-width: 56.25rem) {
-			display: none;
-		}
-	}
-
-	&Paragraph {
-		color: #0e4d4e;
-		font-size: 2rem;
-		width: 50%;
-		font-family: "Aeonik", sans-serif;
-		line-height: 3rem;
-		@media only screen and (max-width: 56.25rem) {
-			font-size: 1.5rem;
-			width: 100%;
-			text-align: center;
-		}
-
-		// @media only screen and (max-width: 20rem) {
-		// 	font-size: 1.1rem;
-		// }
-	}
-}
-
-.sectionMyWorks {
+.Works {
 	padding: 3rem 0 7rem;
 	background-color: $color-white;
+    height: 100vh;
 
 	&Heading {
 		font-family: "Aeonik", sans-serif;
@@ -115,7 +37,7 @@ $color-white: #ffebcd;
 			padding: 0 3.5rem;
 			@media only screen and (max-width: 56.25rem) {
 				padding: 0 2rem;
-				&:hover {
+                &:hover {
                     background-color: transparent;
                     color: transparent;
                 }
@@ -197,34 +119,24 @@ $color-white: #ffebcd;
 			&Image {
 				@media only screen and (max-width: 56.25rem) {
 					width: 100%;
-					height: auto;
 				}
 			}
 		}
 	}
 
-	&ButtonContainer {
-		width: 100%;
-		text-align: center;
-	}
+	// &ButtonContainer {
+	// 	width: 100%;
+	// 	text-align: center;
+	// }
 
-	&Button {
-		background-color: $color-primary;
-		padding: 1rem 2.5rem;
-		border: none;
-		border-radius: 2rem;
-		color: $color-white;
-		font-family: "Oswald", sans-serif;
-		letter-spacing: 0.25rem;
-		transition: all 0.3s;
-		cursor: pointer;
-		border: 1px solid $color-white;
-
-
-		&:hover {
-			background-color: $color-white;
-			color: $color-primary;
-			border: 1px solid $color-primary;
-		}
-	}
+	// &Button {
+	// 	background-color: $color-primary;
+	// 	padding: 1rem 2.5rem;
+	// 	border: none;
+	// 	border-radius: 2rem;
+	// 	color: $color-white;
+	// 	font-family: "Oswald", sans-serif;
+	// 	letter-spacing: 0.25rem;
+       
+	// }
 }

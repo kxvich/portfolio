@@ -1,0 +1,92 @@
+$color-primary: #0e4d4e;
+// $color-secondary: #7b7b7b;
+$color-secondary: #999d9e;
+$color-tertiary: #f8f8f8;
+$color-white: #ffebcd;
+
+.navbar {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 2rem 5rem;
+	font-family: "Aeonik", sans-serif;
+	background-color: $color-primary;
+	color: $color-white;
+    height: 5vh;
+
+	&Button {
+		height: 3rem;
+		width: 7rem;
+		background-color: $color-primary;
+		border: 1px solid $color-white;
+		border-radius: 2rem;
+		color: $color-white;
+		position: fixed;
+		top: 2.5rem;
+		right: 2rem;
+		font-family: "Aeonik", sans-serif;
+		font-size: 1.5rem;
+		cursor: pointer;
+        z-index: 100;
+
+		@media only screen and (min-width: 56.25rem) {
+			display: none;
+		}
+
+		@media only screen and (max-width: 20rem) {
+			font-size: 1rem;
+			width: 5rem;
+			height: 2rem;
+		}
+	}
+
+	@media only screen and (max-width: 56.25rem) {
+		padding: 2rem;
+	}
+}
+
+.logo {
+	display: flex;
+	align-items: center;
+	gap: 5px;
+	cursor: pointer	;
+	// margin: 2rem 0 0 5rem;
+}
+
+.globe {
+	animation: spin 1s infinite linear;
+}
+
+.logoText {
+	font-size: 1.5rem;
+	font-weight: 400;
+	@media only screen and (max-width: 20rem) {
+		font-size: 1.2rem;
+	}
+}
+
+.navLinks {
+	list-style: none;
+	display: flex;
+	gap: 50px;
+	align-items: center;
+
+	@media only screen and (max-width: 56.25rem) {
+		display: none;
+	}
+}
+
+.navLinksItem {
+	font-size: 1.5rem;
+	cursor: pointer;
+}
+
+@keyframes spin {
+	0% {
+		transform: rotate(0);
+	}
+
+	100% {
+		transform: rotate(180deg);
+	}
+}

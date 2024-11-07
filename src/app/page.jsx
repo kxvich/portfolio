@@ -3,18 +3,15 @@
 import { useEffect, useState } from "react";
 import Lenis from "lenis";
 import "lenis/dist/lenis.css";
-import { AnimatePresence, motion } from "framer-motion";
+import { AnimatePresence } from "framer-motion";
 import Intro from "./components/intro";
-import SideBar from "./components/sideBar";
 import Header from "./components/Header";
 import Main from "./components/Main";
 import Footer from "./components/Footer";
-
+import { useAppContext } from "./contexts/AppContext";
 
 export default function Page() {
-	const [isLoading, setIsLoading] = useState(false);
-	const [isActive, setIsActive] = useState(null);
-
+	const {isLoading, setIsLoading} = useAppContext()
 	useEffect(() => {
 		setIsLoading(true);
 		const timer = setTimeout(() => {
@@ -36,7 +33,7 @@ export default function Page() {
 			clearTimeout(timer);
 			cancelAnimationFrame(requestId);
 		};
-	}, []);
+	}, [setIsLoading]);
 	return (
 		<>
 			<AnimatePresence mode="wait">
@@ -44,12 +41,7 @@ export default function Page() {
 					<Intro />
 				) : (
 					<>
-						<AnimatePresence>
-							{isActive && (
-								<SideBar isActive={isActive} setIsActive={setIsActive} />
-							)}
-						</AnimatePresence>
-						<Header isActive={isActive} setIsActive={setIsActive} />
+						<Header />
 						<Main />
 						<Footer />
 					</>
