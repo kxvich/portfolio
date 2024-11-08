@@ -92,10 +92,38 @@ function SideBar() {
 					<div className={styles.socials}>
 						<h2 className={styles.socialsHeading}>Socials</h2>
 						<ul className={styles.socialsList}>
-							<li className={styles.socialsListItem}>Instagram</li>
-							<li className={styles.socialsListItem}>Twitter</li>
-							<li className={styles.socialsListItem}>Linkedin</li>
-							<li className={styles.socialsListItem}>Facebook</li>
+							<li
+								onClick={() =>
+									router.push(
+										"https://www.instagram.com/kxvich?igsh=Znc1eHdrNjRnNGJh&utm_source=qr"
+									)
+								}
+								className={styles.socialsListItem}
+							>
+								Instagram
+							</li>
+							<li
+								onClick={() => router.push("https://x.com/kxvichc?s=21")}
+								className={styles.socialsListItem}
+							>
+								X
+							</li>
+							<li
+								onClick={() => router.push("https://github.com/kxvich")}
+								className={styles.socialsListItem}
+							>
+								Github
+							</li>
+							<li
+								onClick={() =>
+									router.push(
+										"https://www.facebook.com/stanley.emmanuel.526?mibextid=LQQJ4d"
+									)
+								}
+								className={styles.socialsListItem}
+							>
+								Facebook
+							</li>
 						</ul>
 					</div>
 				</motion.div>
