@@ -1,8 +1,10 @@
 import { motion } from "framer-motion";
 import Image from "next/image";
 import styles from "@/app/styles/footer.module.scss";
+import { useRouter } from "next/navigation";
 
 function Footer() {
+	const router = useRouter();
 	const bodyTextVariant = {
 		closed: { opacity: 0, y: 50 },
 		open: (i) => ({
@@ -52,6 +54,11 @@ function Footer() {
 							width={"35"}
 							alt="facebook"
 							className={styles.sectionContactIcon}
+							onClick={() =>
+								router.push(
+									"https://www.facebook.com/stanley.emmanuel.526?mibextid=LQQJ4d"
+								)
+							}
 						/>
 						<Image
 							src={"/instagram.svg"}
@@ -59,6 +66,11 @@ function Footer() {
 							width={"35"}
 							alt="instagram"
 							className={styles.sectionContactIcon}
+							onClick={() =>
+								router.push(
+									"https://www.instagram.com/kxvich?igsh=Znc1eHdrNjRnNGJh&utm_source=qr"
+								)
+							}
 						/>
 						<Image
 							src={"/x-twitter.svg"}
@@ -66,13 +78,15 @@ function Footer() {
 							width={"35"}
 							alt="twitter"
 							className={styles.sectionContactIcon}
+							onClick={() => router.push("https://x.com/kxvichc?s=21")}
 						/>
 						<Image
-							src={"/linkedin.svg"}
+							src={"/github-brands-solid.svg"}
 							height={"35"}
 							width={"35"}
 							alt="linkedin"
 							className={styles.sectionContactIcon}
+							onClick={() => router.push("https://github.com/kxvich")}
 						/>
 					</div>
 				</motion.div>
