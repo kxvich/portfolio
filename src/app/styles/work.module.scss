@@ -1,5 +1,4 @@
 $color-primary: #0e4d4e;
-// $color-secondary: #7b7b7b;
 $color-secondary: #999d9e;
 $color-tertiary: #f8f8f8;
 $color-white: #ffebcd;
@@ -7,7 +6,8 @@ $color-white: #ffebcd;
 .Works {
 	padding: 3rem 0 7rem;
 	background-color: $color-white;
-    height: 100vh;
+	height: 100vh;
+	cursor: pointer;
 
 	&Heading {
 		font-family: "Aeonik", sans-serif;
@@ -37,10 +37,10 @@ $color-white: #ffebcd;
 			padding: 0 3.5rem;
 			@media only screen and (max-width: 56.25rem) {
 				padding: 0 2rem;
-                &:hover {
-                    background-color: transparent;
-                    color: transparent;
-                }
+				&:hover {
+					background-color: transparent;
+					color: transparent;
+				}
 			}
 
 			&:hover {
@@ -119,24 +119,9 @@ $color-white: #ffebcd;
 			&Image {
 				@media only screen and (max-width: 56.25rem) {
 					width: 100%;
+					height: auto;
 				}
 			}
 		}
 	}
-
-	// &ButtonContainer {
-	// 	width: 100%;
-	// 	text-align: center;
-	// }
-
-	// &Button {
-	// 	background-color: $color-primary;
-	// 	padding: 1rem 2.5rem;
-	// 	border: none;
-	// 	border-radius: 2rem;
-	// 	color: $color-white;
-	// 	font-family: "Oswald", sans-serif;
-	// 	letter-spacing: 0.25rem;
-       
-	// }
 }

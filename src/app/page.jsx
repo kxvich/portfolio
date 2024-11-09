@@ -11,7 +11,7 @@ import Footer from "./components/Footer";
 import { useAppContext } from "./contexts/AppContext";
 
 export default function Page() {
-	const {isLoading, setIsLoading} = useAppContext()
+	const { isLoading, setIsLoading } = useAppContext();
 	useEffect(() => {
 		setIsLoading(true);
 		const timer = setTimeout(() => {
@@ -36,17 +36,14 @@ export default function Page() {
 	}, [setIsLoading]);
 	return (
 		<>
-			<AnimatePresence mode="wait">
-				{isLoading ? (
-					<Intro />
-				) : (
-					<>
-						<Header />
-						<Main />
-						<Footer />
-					</>
-				)}
-			</AnimatePresence>
+			<AnimatePresence mode="wait">{isLoading && <Intro />}</AnimatePresence>
+			{!isLoading && (
+				<>
+					<Header />
+					<Main />
+					<Footer />
+				</>
+			)}
 		</>
 	);
 }

@@ -180,14 +180,20 @@ function Main() {
 						);
 					})}
 				</motion.ul>
-				<div className={styles.sectionMyWorksButtonContainer}>
+				<motion.div
+					variants={bodyTextVariant}
+					initial="closed"
+					whileInView="open"
+					viewport={{ once: true, amount: 0.2 }}
+					className={styles.sectionMyWorksButtonContainer}
+				>
 					<button
 						onClick={() => router.push("/work")}
 						className={styles.sectionMyWorksButton}
 					>
 						More Works
 					</button>
-				</div>
+				</motion.div>
 			</section>
 		</div>
 	);

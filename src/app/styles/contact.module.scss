@@ -1,14 +1,17 @@
 $color-primary: #0e4d4e;
-// $color-secondary: #7b7b7b;
 $color-secondary: #999d9e;
 $color-tertiary: #f8f8f8;
 $color-white: #ffebcd;
 
 .container {
-	// height: 100vh;
 	background-color: $color-white;
 	padding: 5rem 0 3rem 0;
 	color: $color-primary;
+
+	@media only screen and (max-width: 56.25rem) and (min-height: 60.625rem) {
+		height: 100vh;
+		padding-bottom: 0;
+	}
 }
 
 .heading {
@@ -16,7 +19,8 @@ $color-white: #ffebcd;
 	max-width: 95rem;
 	margin-bottom: 4rem;
 	text-align: center;
-	@media only screen and (max-width: 56.25rem) {
+
+	@media only screen and (max-width: 56.25rem) and (max-height: 62.5rem) {
 		padding: 0 1rem;
 	}
 }
@@ -27,7 +31,10 @@ $color-white: #ffebcd;
 	font-size: 5rem;
 	width: 100%;
 	margin: 0;
-	@media only screen and (max-width: 56.25rem) {
+	@media only screen and (max-width: 56.25rem) and (min-height: 60.625rem) {
+		font-size: 4.5rem;
+	}
+	@media only screen and (max-width: 56.25rem) and (max-height: 62.5rem) {
 		font-size: 3.5rem;
 	}
 }
@@ -43,7 +50,10 @@ $color-white: #ffebcd;
 		font-size: 2rem;
 		font-weight: 400;
 		margin-bottom: 6rem;
-		@media only screen and (max-width: 56.25rem) {
+		@media only screen and (max-width: 56.25rem) and (min-height: 62.5rem) {
+			font-size: 2rem;
+		}
+		@media only screen and (max-width: 56.25rem) and (max-height: 62.5rem) {
 			font-size: 1.7rem;
 			padding: 2rem;
 			margin-bottom: 2rem;
@@ -117,11 +127,13 @@ $color-white: #ffebcd;
 	font-size: 2rem;
 	font-family: "oswald", serif;
 	gap: 4rem;
+	@media only screen and (max-width: 56.25rem) and (min-height: 60.625rem) {
+		margin-top: 20rem;
+	}
+	@media only screen and (max-width: 56.25rem) and (max-height: 62.5rem) {
+		gap: 1rem;
+	}
 	&Icon {
 		cursor: pointer;
-
-		@media only screen and (max-width: 26.75rem) {
-			gap: 1rem;
-		}
 	}
 }

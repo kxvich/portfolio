@@ -1,10 +1,8 @@
 import { motion } from "framer-motion";
-import Image from "next/image";
 import styles from "@/app/styles/footer.module.scss";
-import { useRouter } from "next/navigation";
+import Icon from "./Icon";
 
 function Footer() {
-	const router = useRouter();
 	const bodyTextVariant = {
 		closed: { opacity: 0, y: 50 },
 		open: (i) => ({
@@ -25,6 +23,42 @@ function Footer() {
 			},
 		}),
 	};
+
+	const socialsIcon = [
+		{
+			src: "/facebook.svg",
+			height: "35",
+			width: "35",
+			alt: "facebook icon",
+			className: styles.sectionContactIcon,
+			clickUrl: "https://www.facebook.com/stanley.emmanuel.526?mibextid=LQQJ4d",
+		},
+		{
+			src: "/instagram.svg",
+			height: "35",
+			width: "35",
+			alt: "instagram icon",
+			className: styles.sectionContactIcon,
+			clickUrl:
+				"https://www.instagram.com/kxvich?igsh=Znc1eHdrNjRnNGJh&utm_source=qr",
+		},
+		{
+			src: "/x-twitter.svg",
+			height: "35",
+			width: "35",
+			alt: "twitter icon",
+			className: styles.sectionContactIcon,
+			clickUrl: "https://x.com/kxvichc?s=21",
+		},
+		{
+			src: "/github-brands-solid.svg",
+			height: "35",
+			width: "35",
+			alt: "github icon",
+			className: styles.sectionContactIcon,
+			clickUrl: "https://github.com/kxvich",
+		},
+	];
 	return (
 		<div>
 			<section className={styles.sectionContact}>
@@ -40,54 +74,18 @@ function Footer() {
 							{`Contact Me, Let's work`}
 						</h1>
 					</div>
-					<Image
-						src={"/arrow-right-solid-white.svg"}
-						width={"20"}
-						height={"20"}
+					<Icon
+						src="/arrow-right-solid-white.svg"
+						width="20"
+						height="20"
 						alt="arrow-icon"
 						className={styles.sectionContactArrow}
 					/>
+
 					<div className={styles.sectionContactSocialsContainer}>
-						<Image
-							src={"/facebook.svg"}
-							height={"35"}
-							width={"35"}
-							alt="facebook"
-							className={styles.sectionContactIcon}
-							onClick={() =>
-								router.push(
-									"https://www.facebook.com/stanley.emmanuel.526?mibextid=LQQJ4d"
-								)
-							}
-						/>
-						<Image
-							src={"/instagram.svg"}
-							height={"35"}
-							width={"35"}
-							alt="instagram"
-							className={styles.sectionContactIcon}
-							onClick={() =>
-								router.push(
-									"https://www.instagram.com/kxvich?igsh=Znc1eHdrNjRnNGJh&utm_source=qr"
-								)
-							}
-						/>
-						<Image
-							src={"/x-twitter.svg"}
-							height={"35"}
-							width={"35"}
-							alt="twitter"
-							className={styles.sectionContactIcon}
-							onClick={() => router.push("https://x.com/kxvichc?s=21")}
-						/>
-						<Image
-							src={"/github-brands-solid.svg"}
-							height={"35"}
-							width={"35"}
-							alt="linkedin"
-							className={styles.sectionContactIcon}
-							onClick={() => router.push("https://github.com/kxvich")}
-						/>
+						{socialsIcon.map((icon, i) => (
+							<Icon key={`k_${i}`} {...icon} />
+						))}
 					</div>
 				</motion.div>
 				<motion.div

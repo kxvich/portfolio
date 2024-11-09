@@ -1,7 +1,7 @@
 "use client";
 
 import styles from "@/app/styles/intro.module.scss";
-import { delay, motion } from "framer-motion";
+import {motion } from "framer-motion";
 
 function Intro() {
 	const dropdownVariants = {
