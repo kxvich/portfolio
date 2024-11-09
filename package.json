@@ -9,12 +9,15 @@
 		"lint": "next lint"
 	},
 	"dependencies": {
+		"emailjs-com": "^3.2.0",
 		"framer-motion": "^11.11.9",
 		"lenis": "^1.1.14",
 		"locomotive-scroll": "^5.0.0-beta.21",
 		"next": "^15.0.2",
 		"react": "^18.3.1",
 		"react-dom": "^18.3.1",
+		"react-router-dom": "^6.28.0",
+		"react-toastify": "^10.0.6",
 		"sass": "^1.80.4"
 	},
 	"devDependencies": {

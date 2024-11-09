@@ -1,3 +1,4 @@
+"use client"
 import { motion } from "framer-motion";
 import styles from "../styles/header.module.scss";
 
@@ -96,16 +97,6 @@ function Header() {
 						{getChar("Lagos Nigeria")}
 					</motion.h1>
 				</div>
-				{/* <div style={{ overflow: "hidden" }}>
-					<motion.h1
-						variants={itemVariant}
-						initial="hidden"
-						animate="open"
-						className={styles.headingText}
-					>
-						{getChar("•Portfolio 2024•")}
-					</motion.h1>
-				</div> */}
 			</div>
 		</div>
 	);

@@ -1,6 +1,4 @@
-// @import "../globals.scss";
 $color-primary: #0e4d4e;
-// $color-secondary: #7b7b7b;
 $color-secondary: #999d9e;
 $color-tertiary: #f8f8f8;
 $color-white: #ffebcd;
@@ -10,7 +8,10 @@ $color-white: #ffebcd;
 	background-color: $color-primary;
 	padding: 4rem 0;
 	overflow: hidden;
-	@media only screen and (max-width: 56.25rem) {
+	@media only screen and (max-width: 56.25rem) and (min-height: 60.625rem) {
+		height: 20vh;
+	}
+	@media only screen and (max-width: 56.25rem) and (max-height: 62.5rem) {
 		padding: 2rem;
 		height: 40vh;
 	}
@@ -76,6 +77,8 @@ $color-white: #ffebcd;
 		letter-spacing: 0.2rem;
 		margin-bottom: 12rem;
 		transition: all 0.3s;
+		cursor: pointer;
+
 		&:not(:last-child) {
 			margin-right: 2rem;
 		}

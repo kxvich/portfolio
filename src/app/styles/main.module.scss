@@ -1,7 +1,4 @@
-// @import "../globals.scss";
-
 $color-primary: #0e4d4e;
-// $color-secondary: #7b7b7b;
 $color-secondary: #999d9e;
 $color-tertiary: #f8f8f8;
 $color-white: #ffebcd;
@@ -10,10 +7,16 @@ $color-white: #ffebcd;
 	background-color: #ffebcd;
 	padding: 10rem 15rem;
 
-	@media only screen and (max-width: 56.25rem) {
+	@media only screen and (max-width: 56.25rem) and (min-height: 60.625rem) {
+		padding: 2rem 3rem;
+		height: 30vh;
+	}
+
+	@media only screen and (max-width: 56.25rem) and (max-height: 62.5rem) {
 		padding: 2rem 3rem;
 		height: 80vh;
 	}
+
 	@media only screen and (max-width: 26.75rem) {
 		padding: 3rem;
 		height: 50vh;
@@ -116,9 +119,9 @@ $color-white: #ffebcd;
 			@media only screen and (max-width: 56.25rem) {
 				padding: 0 2rem;
 				&:hover {
-                    background-color: transparent;
-                    color: transparent;
-                }
+					background-color: transparent;
+					color: transparent;
+				}
 			}
 
 			&:hover {
@@ -219,7 +222,6 @@ $color-white: #ffebcd;
 		transition: all 0.3s;
 		cursor: pointer;
 		border: 1px solid $color-white;
-
 
 		&:hover {
 			background-color: $color-white;

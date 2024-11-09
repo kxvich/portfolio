@@ -1,5 +1,4 @@
 $color-primary: #0e4d4e;
-// $color-secondary: #7b7b7b;
 $color-secondary: #999d9e;
 $color-tertiary: #f8f8f8;
 $color-white: #ffebcd;
@@ -8,6 +7,11 @@ $color-white: #ffebcd;
 	background-color: $color-white;
 	padding: 5rem 0;
 	color: $color-primary;
+
+	@media only screen and (max-width: 56.25rem) and (min-height: 60.625rem) {
+		height: 100vh;
+		padding: 5rem 0 0 0;
+	}
 }
 
 .heading {
@@ -26,7 +30,10 @@ $color-white: #ffebcd;
 	font-size: 5rem;
 	width: 100%;
 	margin: 0;
-	@media only screen and (max-width: 56.25rem) {
+	@media only screen and (max-width: 56.25rem) and (min-height: 60.625rem) {
+		font-size: 4.5rem;
+	}
+	@media only screen and (max-width: 56.25rem) and (max-height: 62.5rem) {
 		font-size: 3.5rem;
 	}
 }
@@ -43,7 +50,11 @@ $color-white: #ffebcd;
 		font-size: 2rem;
 		font-weight: 400;
 		margin-bottom: 6rem;
-		@media only screen and (max-width: 56.25rem) {
+		@media only screen and (max-width: 56.25rem) and (min-height: 60.625rem) {
+			font-size: 2.5rem;
+			padding-top: 2rem 3rem;
+		}
+		@media only screen and (max-width: 56.25rem) and (max-height: 62.5rem) {
 			font-size: 1.7rem;
 			padding: 2rem;
 			margin-bottom: 2rem;
@@ -65,7 +76,11 @@ $color-white: #ffebcd;
 	font-size: 1.5rem;
 	font-weight: 400;
 	border-top: 1px solid $color-secondary;
-	@media only screen and (max-width: 56.25rem) {
+	@media only screen and (max-width: 56.25rem) and (min-height: 60.625rem) {
+		font-size: 2rem;
+		padding: 0 3rem;
+	}
+	@media only screen and (max-width: 56.25rem) and (max-height: 62.5rem) {
 		font-size: 1.3rem;
 		padding: 0 2rem;
 	}
