@@ -28,6 +28,15 @@ function Main() {
 			images: ["/samanja1.png", "/samanja2.png", "/samanja3.png"],
 			href: "https://samanja.org/",
 		},
+		{
+			name: "Cruiters",
+			id: 3,
+			description:
+				"This project was created to showcase a simple and visually appealing user interface for a recruitment company. It focuses on clean design and smooth animations to enhance user experience. While it demonstrates the visual layout and interactions, features such as routing, search functionality, or backend integration are not implemented.",
+			images: ["/cruiters1.png", "/cruiters2.png", "/cruiters3.png"],
+			href: "https://cruiters.vercel.app",
+		},
+		
 	];
 	const bodyTextVariant = {
 		closed: { opacity: 0, y: 50 },

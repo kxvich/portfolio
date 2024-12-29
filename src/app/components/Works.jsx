@@ -29,6 +29,7 @@ function Works() {
 			images: ["/samanja1.png", "/samanja2.png", "/samanja3.png"],
 			href: "https://samanja.org/",
 		},
+		
 	];
 	const bodyTextVariant = {
 		closed: { opacity: 0, y: 50 },
